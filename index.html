@@ -1,0 +1,890 @@
+<html>
+
+<head>
+
+<script language="JavaScript">
+
+// randomly fill out the questionnaire
+function fill()
+	{
+	var i,j,item="",num=0;
+	var radiobut;
+	var region = ['Fp1','Fp2','F7','F8','F3','Fz','F4','FC5','FC6','T3','T4','T5','T6','C3','Cz','C4','PC3','PO3','Pz','PC4','PO4','O1','O2'];
+	var count = [8,8,6,6,4,4,4,4,4,6,6,6,6,4,4,4,4,4,4,4,4,6,6];
+	var letter = ['a','b','c','d','e','f','g','h'];
+
+	// fill-in each region and its facets
+	for(i=0; i<23; i++) {
+		for(j=0; j<count[i]; j++) { 
+			num = parseInt(Math.random()*3); // value 0 to 2
+			radiobut = document.getElementsByName(region[i]+letter[j]);
+			radiobut[num].checked = true;
+			}
+		}
+	return;
+	}
+</script>
+
+</head>
+
+
+
+<body>
+
+<p align=center>
+<table width=625>
+<tr><td>
+
+<form action="../cgi/116survey.pl" method=post>
+
+<p align=center>
+<b>NeuroPQ Online</b>
+</p>
+
+<p>
+欢迎来到NeuroPQ！此问卷有助于你了解你如何使用大脑的23个不同区域！它基于神经科学研究和作者对数百人的真实脑成像结果。
+</p>
+<p>
+你大脑的每个区域都能帮你完成各种具体和抽象的任务。通过完成NeuroPQ，你将获得你相对擅长或感兴趣的任务的资料，那是专属于你的大脑模式。
+</p>
+<p>
+【实验数据显示，虽然没有完全相同，但每种MBTI人格都有一种相似的大脑模式】
+</p>
+
+<hr>
+
+<p align=center><b>
+<a href="http://www.neuropq.com/">强烈建议英文阅读能力强的直接点击这里</a>，做题更快。
+</b></p>
+
+<p>
+辅导员：
+<select name="facilitator">
+<option selected value="Unknown">还没有
+<option value="Allan Duncan">Allan Duncan
+<option value="Ann Holm">Ann Holm
+<option value="Byron Almen">Byron Almen
+<option value="Camronn Huff">Camronn Huff
+<option value="Cara Cocuzza">Cara Cocuzza
+<option value="Cecile Riddle">Cecile Riddle
+<option value="Charles Morehead">Charles Morehead
+<option value="CJ Fitzsimons">CJ Fitzsimons
+<option value="Dan Green">Dan Green
+<option value="Dario Nardi">Dario Nardi
+<option value="David Hughey">David Hughey
+<option value="David Piltz">David Piltz
+<option value="Debra Woods">Debra Woods
+<option value="Denise OSullivan">Denise O'Sullivan
+<option value="Doris Fuellgrabe">Doris Fuellgrabe
+<option value="Edward Stambaugh">Dr. Edward Stambaugh II
+<option value="Fusae Harada">Fusae Harada
+<option value="Heather Pallas">Heather Pallas
+<option value="Jane Kise">Jane Kise
+<option value="Jeff Hart">Dr. Jeff Hart
+<option value="Kevin Murphy">Kevin Murphy
+<option value="Lisa Wellington">Lisa Wellington
+<option value="Lori Zucchino">Lori Zucchino
+<option value="Mary Landell">Mary Landell
+<option value="Mary Parish">Mary Parish
+<option value="Dario Nardi">Mario Sikora
+<option value="Moosa Al Jowaiser">Dr. Moosa Al-Jowaiser
+<option value="Nicole Gruel">Nicole Gruel
+<option value="Pam FoxRollin">Pam Fox Rollin
+<option value="Paul Gale Baker">Paul Gale-Baker
+<option value="Dario Nardi">Peter McNab
+<option value="Roger Pearman">Roger Pearman
+<option value="Stephanie Kindt">Stephanie Kindt
+<option value="Steven Price">Steven Price
+<option value="Steve Whiteford">Steve Whiteford
+<option value="Sue Blair">Sue Blair
+<option value="Susan Anderson">Susan Anderson
+<option value="Susan Nash">Susan Nash
+<option value="Susan Zadeh">Susan Zadah
+</select>
+</p>
+
+
+
+<p>
+你的姓名: 
+<input type="text" name="username" size=30 required="required">
+</p>
+
+<p>
+你的电子邮件（以获取结果）:
+<input type="text" name="contact" size=30 required="required">
+</p>
+
+<hr>
+
+<p align=center><b>
+测试引导
+</b></p>
+
+<p>
+按照3分制，给下面的每个题目评分：“低”（左按钮），“中”（中间按钮），“高”（右按钮）。如果你与题目中的描述只有部分相关，请选择“中”。如果你觉得一个题目措辞尴尬，难以理解，过于笼统等，请选择“低”。【另外，由于是翻译版本，可能存在翻译问题，但远比网页翻译准确得多！】
+</p>
+<p>
+试着快点做，带上你的第一印象。
+</p>
+<p>
+注意：你的分数与平均值保持一致。如果你所有题目都选“中”或“高”，你的分数会计算为平均水平。如果你对自己的了解不自信，尽量别全选“低”、全选“中”或全选“高”；反之，如果你很确定的话，就大胆选吧。
+</p>
+
+
+<hr>
+
+<p align=center><b>第一部分，共九部分</b></p>
+<p>
+<input type=radio name="Fp1a" value=0><input type=radio name="Fp1a" value=1><input type=radio name="Fp1a" value=2>&nbsp;
+Easily stay focused. 轻松保持专注。
+</p>
+
+<p>
+<input type=radio name="Fp2a" value=0><input type=radio name="Fp2a" value=1><input type=radio name="Fp2a" value=2>&nbsp;
+Stay open to new data and experiences. 保持对新数据和体验的开放态度。
+</p>
+
+<p>
+<input type=radio name="Fp1b" value=0><input type=radio name="Fp1b" value=1><input type=radio name="Fp1b" value=2>&nbsp;
+Quickly make decisions, even from among several options. 快速做出决定，即使从几个选项中做出决策。
+</p>
+
+<p>
+<input type=radio name="Fp2b" value=0><input type=radio name="Fp2b" value=1><input type=radio name="Fp2b" value=2>&nbsp;
+Seek stimulating ideas and activities. 寻求激励人心的想法和活动。
+</p>
+
+<p>
+<input type=radio name="Fp1c" value=0><input type=radio name="Fp1c" value=1><input type=radio name="Fp1c" value=2>&nbsp;
+Organized, results-oriented, and sharp. 有条理、注重结果、清晰的。
+</p>
+
+<p>
+<input type=radio name="Fp2c" value=0><input type=radio name="Fp2c" value=1><input type=radio name="Fp2c" value=2>&nbsp;
+Engage in a creative process, often mixing and matching ideas. 参与一个创造性的过程，经常混合和匹配想法。
+</p>
+
+<p>
+<input type=radio name="Fp1d" value=0><input type=radio name="Fp1d" value=1><input type=radio name="Fp1d" value=2>&nbsp;
+Filter out distractions and criticism. 过滤掉分心之事和批评。
+</p>
+
+<p>
+<input type=radio name="Fp2d" value=0><input type=radio name="Fp2d" value=1><input type=radio name="Fp2d" value=2>&nbsp;
+Work on multiple creative projects at once. 同时处理多个创意项目。
+</p>
+
+<p>
+<input type=radio name="Fp1e" value=0><input type=radio name="Fp1e" value=1><input type=radio name="Fp1e" value=2>&nbsp;
+Evaluate situations according to a principle. 根据一项原则评估情况。
+</p>
+
+<p>
+<input type=radio name="Fp2e" value=0><input type=radio name="Fp2e" value=1><input type=radio name="Fp2e" value=2>&nbsp;
+Enjoy brainstorming. 享受头脑风暴。【指集体无拘束的讨论，是自由联想的、禁止批评的】
+</p>
+
+<p>
+<input type=radio name="Fp1f" value=0><input type=radio name="Fp1f" value=1><input type=radio name="Fp1f" value=2>&nbsp;
+Notice and correct errors. 注意并纠正错误。
+</p>
+
+<p>
+<input type=radio name="Fp2f" value=0><input type=radio name="Fp2f" value=1><input type=radio name="Fp2f" value=2>&nbsp;
+Reflect on new data, applying it to yourself and how it fits in your life. 琢磨新的数据，将其应用到你自己身上，以及它怎样适用于你的生活。
+</p>
+
+<p>
+<input type=radio name="Fp1g" value=0><input type=radio name="Fp1g" value=1><input type=radio name="Fp1g" value=2>&nbsp;
+Drive to clarify needs, goals, and ideas. 努力澄清需求、目标和想法。
+</p>
+
+<p>
+<input type=radio name="Fp2g" value=0><input type=radio name="Fp2g" value=1><input type=radio name="Fp2g" value=2>&nbsp;
+Reflect on criticism from others, for self-awareness. 有意识地反思他人的批评。
+</p>
+
+<p>
+<input type=radio name="Fp1h" value=0><input type=radio name="Fp1h" value=1><input type=radio name="Fp1h" value=2>&nbsp;
+Show confidence (regardless of your actual thoughts/feelings). 表现出自信（无论你的实际想法/感受如何）。
+</p>
+
+<p>
+<input type=radio name="Fp2h" value=0><input type=radio name="Fp2h" value=1><input type=radio name="Fp2h" value=2>&nbsp;
+You are easy to read, showing your reactions on your face. 你容易被人看懂，反应写在脸上。
+</p>
+
+<hr>
+
+<p align=center><b>第二部分，共九部分</b></p><p>
+<input type=radio name="F7a" value=0><input type=radio name="F7a" value=1><input type=radio name="F7a" value=2>&nbsp;
+Mirror others' behavior to build rapport. 模仿他人的行为，也许伴随建立融洽的关系。
+</p>
+
+<p>
+<input type=radio name="F8a" value=0><input type=radio name="F8a" value=1><input type=radio name="F8a" value=2>&nbsp;
+Accurately visualize the details of a place or event. 精确地呈现一个地方或事件的细节。
+</p>
+
+<p>
+<input type=radio name="F7b" value=0><input type=radio name="F7b" value=1><input type=radio name="F7b" value=2>&nbsp;
+Quickly pick up skills merely by observing others. 仅仅通过观察他人来快速掌握技能。
+</p>
+
+<p>
+<input type=radio name="F8b" value=0><input type=radio name="F8b" value=1><input type=radio name="F8b" value=2>&nbsp;
+Stick to your identify and beliefs. 坚持你认同的和相信的。
+</p>
+
+<p>
+<input type=radio name="F7c" value=0><input type=radio name="F7c" value=1><input type=radio name="F7c" value=2>&nbsp;
+Often imagine someone else's situation, maybe with empathy. 经常想象别人的情况，也许是带着同理心。
+</p>
+
+<p>
+<input type=radio name="F8c" value=0><input type=radio name="F8c" value=1><input type=radio name="F8c" value=2>&nbsp;
+Focus on what holds true regardless of the details of a situation. 不理会情况的细节，只专注于合理的是什么。
+</p>
+
+<p>
+<input type=radio name="F7d" value=0><input type=radio name="F7d" value=1><input type=radio name="F7d" value=2>&nbsp;
+Imaginatively visualize another place or time. 富有想象力地想象另一个类似的空间或时间。
+</p>
+
+<p>
+<input type=radio name="F8d" value=0><input type=radio name="F8d" value=1><input type=radio name="F8d" value=2>&nbsp;
+Evaluate people, activities, and values in terms of like or dislike. 根据喜欢或不喜欢的价值观来评估人、活动。
+</p>
+
+<p>
+<input type=radio name="F7e" value=0><input type=radio name="F7e" value=1><input type=radio name="F7e" value=2>&nbsp;
+Notice what fits a situation and make inferences about it. 注意什么符合一种情况或局面，并对此进行推断。
+</p>
+
+<p>
+<input type=radio name="F8e" value=0><input type=radio name="F8e" value=1><input type=radio name="F8e" value=2>&nbsp;
+Remain modest. 保持谦虚。
+</p>
+
+<p>
+<input type=radio name="F7f" value=0><input type=radio name="F7f" value=1><input type=radio name="F7f" value=2>&nbsp;
+Understand things using analogies. 使用类比来理解事物。
+</p>
+
+<p>
+<input type=radio name="F8f" value=0><input type=radio name="F8f" value=1><input type=radio name="F8f" value=2>&nbsp;
+Not embellish as you recall details with high accuracy. 当你高精度回忆细节时，不进行美化。
+</p>
+
+<hr><p align=center><b>第三部分，共九部分</b></p>
+<p>
+<input type=radio name="F3a" value=0><input type=radio name="F3a" value=1><input type=radio name="F3a" value=2>&nbsp;
+Easily follow a chain of reasoning. 轻松跟进一系列推理。
+</p>
+
+<p>
+<input type=radio name="Fza" value=0><input type=radio name="Fza" value=1><input type=radio name="Fza" value=2>&nbsp;
+Given what's known or likely, come up with a best guess or hypothesis. 根据已知或可能的情况，想出一个最好的猜测或假设。
+</p>
+
+<p>
+<input type=radio name="F4a" value=0><input type=radio name="F4a" value=1><input type=radio name="F4a" value=2>&nbsp;
+Easily follow abstract ideas. 轻松跟进抽象的想法。
+</p>
+
+<p>
+<input type=radio name="F3b" value=0><input type=radio name="F3b" value=1><input type=radio name="F3b" value=2>&nbsp;
+Often backtrack to correct thinking due to logic errors. 由于逻辑错误，经常回头纠正思维。
+</p>
+
+<p>
+<input type=radio name="Fzb" value=0><input type=radio name="Fzb" value=1><input type=radio name="Fzb" value=2>&nbsp;
+Like to offer predictions, pose questions, generalize, or interpret what's happening. 喜欢提供预测、提出问题、概括或解释正在发生的事情。
+</p>
+
+<p>
+<input type=radio name="F4b" value=0><input type=radio name="F4b" value=1><input type=radio name="F4b" value=2>&nbsp;
+Accurately place concepts by considering multiple categories to find a best-fit. 通过考虑多个类别来找到最适合的概念，准确地放置概念。
+</p>
+
+<p>
+<input type=radio name="F3c" value=0><input type=radio name="F3c" value=1><input type=radio name="F3c" value=2>&nbsp;
+Wordsmith with precision to convey complex ideas in a technical way. 精确的以术语传达复杂的想法的词语大师。
+</p>
+
+<p>
+<input type=radio name="Fzc" value=0><input type=radio name="Fzc" value=1><input type=radio name="Fzc" value=2>&nbsp;
+Quick to speculate, make inferences, and offer conclusions. 快速推测、推断和得出结论。
+</p>
+
+<p>
+<input type=radio name="F4c" value=0><input type=radio name="F4c" value=1><input type=radio name="F4c" value=2>&nbsp;
+Form compelling metaphors, where the parts of parallel ideas match up. 形成令人信服的隐喻，其中平行想法的部分相匹配。
+</p>
+
+<p>
+<input type=radio name="F3d" value=0><input type=radio name="F3d" value=1><input type=radio name="F3d" value=2>&nbsp;
+Mentally plan the steps to complete a task. 在心理上计划完成任务的步骤。
+</p>
+
+<p>
+<input type=radio name="Fzd" value=0><input type=radio name="Fzd" value=1><input type=radio name="Fzd" value=2>&nbsp;
+Influence others by giving suggestions. 通过提供建议来影响他人。
+</p>
+
+<p>
+<input type=radio name="F4d" value=0><input type=radio name="F4d" value=1><input type=radio name="F4d" value=2>&nbsp;
+Get puns, make jokes, and offer humorous insights.  抓住双关语，开玩笑，提供幽默的见解。
+</p>
+
+
+<hr>
+
+<p align=center><b>第四部分，共九部分</b></p>
+<p>
+<input type=radio name="FC5a" value=0><input type=radio name="FC5a" value=1><input type=radio name="FC5a" value=2>&nbsp;
+Excel at quickly completing complex tasks. 擅长快速完成复杂任务。
+</p>
+
+<p>
+<input type=radio name="FC6a" value=0><input type=radio name="FC6a" value=1><input type=radio name="FC6a" value=2>&nbsp;
+Comfortable with emotional complexity. 对情感复杂性感到舒适。
+</p>
+
+<p>
+<input type=radio name="FC5b" value=0><input type=radio name="FC5b" value=1><input type=radio name="FC5b" value=2>&nbsp;
+Speak and act precisely and efficiently according to a set of rules. 根据一套规则准确有效地说话和行动。
+</p>
+
+<p>
+<input type=radio name="FC6b" value=0><input type=radio name="FC6b" value=1><input type=radio name="FC6b" value=2>&nbsp;
+Easily name shades of feeling. 轻松说出感情的阴影。
+</p>
+
+<p>
+<input type=radio name="FC5c" value=0><input type=radio name="FC5c" value=1><input type=radio name="FC5c" value=2>&nbsp;
+Monitor yourself and say "no" to impulses, emotional appeal, and mental clutter. 监控自己，对冲动、情感诉求和精神混乱说不。
+</p>
+
+<p>
+<input type=radio name="FC6c" value=0><input type=radio name="FC6c" value=1><input type=radio name="FC6c" value=2>&nbsp;
+Monitor one's own and others' feelings, knowing how words and actions impact people emotionally. 监控自己和他人的感受，了解言行如何影响人们的情感。
+</p>
+
+<p>
+<input type=radio name="FC5d" value=0><input type=radio name="FC5d" value=1><input type=radio name="FC5d" value=2>&nbsp;
+Rapidly organize ideas into a fluent presentation. 快速将想法组织成流畅的陈述。
+</p>
+
+<p>
+<input type=radio name="FC6d" value=0><input type=radio name="FC6d" value=1><input type=radio name="FC6d" value=2>&nbsp;
+Speak dramatically, and like art, music, writing and such to be evocative. 戏剧性地说话，喜欢艺术、音乐、写作等，令人回味。
+</p>
+
+
+<hr>
+
+<p align=center><b>第五部分，共九部分</b></p>
+<p>
+<input type=radio name="C3a" value=0><input type=radio name="C3a" value=1><input type=radio name="C3a" value=2>&nbsp;
+Notice and follow scripts, formulas, templates, and guides. 注意并遵循脚本、公式、模板和指南。
+</p>
+
+<p>
+<input type=radio name="Cza" value=0><input type=radio name="Cza" value=1><input type=radio name="Cza" value=2>&nbsp;
+Highly driven physically or mentally. 身体或精神上的高度驱动力。
+</p>
+
+<p>
+<input type=radio name="C4a" value=0><input type=radio name="C4a" value=1><input type=radio name="C4a" value=2>&nbsp;
+Draw, paint, sculpt, or otherwise excel at artistic endeavors, making forms come alive. 绘画、雕刻或以其他方式表现艺术创作，使形态栩栩如生。
+</p>
+
+<p>
+<input type=radio name="C3b" value=0><input type=radio name="C3b" value=1><input type=radio name="C3b" value=2>&nbsp;
+Draw accurate charts and diagrams, take precise measures, and color inside the lines. 绘制准确的图表，采取精确的测量，并在线条内着色。
+</p>
+
+<p>
+<input type=radio name="Czb" value=0><input type=radio name="Czb" value=1><input type=radio name="Czb" value=2>&nbsp;
+Strongly motivated toward success, often in multiple interests, able to coordinate many elements and bring them together. 强烈的成功动机，通常出于多种利益，能够协调许多元素并将其结合在一起。
+</p>
+
+<p>
+<input type=radio name="C4b" value=0><input type=radio name="C4b" value=1><input type=radio name="C4b" value=2>&nbsp;
+Express the artistic qualities of an experience. 表达体验的艺术品质。
+</p>
+
+<p>
+<input type=radio name="C3c" value=0><input type=radio name="C3c" value=1><input type=radio name="C3c" value=2>&nbsp;
+Memorize and execute a sequence of moves (dance steps, etc.).   记住并执行一系列动作（舞蹈步骤等）。
+</p>
+
+<p>
+<input type=radio name="Czc" value=0><input type=radio name="Czc" value=1><input type=radio name="Czc" value=2>&nbsp;
+Sensitive to sensory input, often with fine motor skills. 对感官输入敏感，通常具有精细的运动技能。
+</p>
+
+<p>
+<input type=radio name="C4c" value=0><input type=radio name="C4c" value=1><input type=radio name="C4c" value=2>&nbsp;
+Flow with a natural, casual grace. 自然、随意的优雅舞动肢体。
+</p>
+
+
+<p>
+<input type=radio name="C3d" value=0><input type=radio name="C3d" value=1><input type=radio name="C3d" value=2>&nbsp;
+Draw upon facts and figures. 借鉴事实和数据。
+</p>
+
+<p>
+<input type=radio name="Czd" value=0><input type=radio name="Czd" value=1><input type=radio name="Czd" value=2>&nbsp;
+Move energetically with determination. 坚定不移地积极行动。
+</p>
+
+<p>
+<input type=radio name="C4d" value=0><input type=radio name="C4d" value=1><input type=radio name="C4d" value=2>&nbsp;
+Dance with rhythm, improvising moves that draw attention. 有节奏地跳舞，吸引注意力的即兴动作。
+</p>
+
+
+<hr>
+
+<p align=center><b>第六部分，共九部分</b></p>
+<p>
+<input type=radio name="T3a" value=0><input type=radio name="T3a" value=1><input type=radio name="T3a" value=2>&nbsp;
+Focus on word content, hearing what is actually said. 专注于字词内容，倾听实际上实际说了什么。
+</p>
+
+<p>
+<input type=radio name="T4a" value=0><input type=radio name="T4a" value=1><input type=radio name="T4a" value=2>&nbsp;
+Hear melody, voice tone, and intent. 倾听旋律、语气和意图。
+</p>
+
+<p>
+<input type=radio name="T3b" value=0><input type=radio name="T3b" value=1><input type=radio name="T3b" value=2>&nbsp;
+Attend to proper grammar, usage, and enunciation. 注意适当的语法、用法和发音。
+</p>
+
+<p>
+<input type=radio name="T4b" value=0><input type=radio name="T4b" value=1><input type=radio name="T4b" value=2>&nbsp;
+Good at speaking in different accents or humming a melody. 擅长用不同的口音说话或哼奏旋律。
+</p>
+
+<p>
+<input type=radio name="T3c" value=0><input type=radio name="T3c" value=1><input type=radio name="T3c" value=2>&nbsp;
+Distinguish when use of one word over another greatly alters a meaning. 区分何种情况下将一个字词替换成另一个字词会大大改变含义。
+</p>
+
+<p>
+<input type=radio name="T4c" value=0><input type=radio name="T4c" value=1><input type=radio name="T4c" value=2>&nbsp;
+Detect when someone speaks with bad intent. 检测某人说话时意图不当。
+</p>
+
+
+<p>
+<input type=radio name="T3d" value=0><input type=radio name="T3d" value=1><input type=radio name="T3d" value=2>&nbsp;
+Hear music in a technical way. 以专业方式聆听音乐。
+</p>
+
+<p>
+<input type=radio name="T4d" value=0><input type=radio name="T4d" value=1><input type=radio name="T4d" value=2>&nbsp;
+Notice when something "resonates" personally or when a person's voice doesn't match their words, betraying phoniness. 注意当某事“引起个人共鸣”时，或者当一个人的声音与他们的话不匹配、暴露了虚伪时。
+</p>
+
+<p>
+<input type=radio name="T3e" value=0><input type=radio name="T3e" value=1><input type=radio name="T3e" value=2>&nbsp;
+Easily suppress your sexual impulses or when feeling pain. 能轻松抑制你的性冲动或容易感到疼痛。 
+</p>
+
+<p>
+<input type=radio name="T4e" value=0><input type=radio name="T4e" value=1><input type=radio name="T4e" value=2>&nbsp;
+Notice ethics violations. 注意违反道德的行为。
+</p>
+
+<p>
+<input type=radio name="T3f" value=0><input type=radio name="T3f" value=1><input type=radio name="T3f" value=2>&nbsp;
+Use talk to get through awkward situations. 使用谈话来度过尴尬的情况。
+</p>
+
+<p>
+<input type=radio name="T4f" value=0><input type=radio name="T4f" value=1><input type=radio name="T4f" value=2>&nbsp;
+Often have to suppress a hostile reaction or feeling irritated. 经常不得不抑制敌对反应或感到恼火。
+</p>
+
+
+<hr>
+
+<p align=center><b>第七部分，共九部分</b></p>
+<p>
+<input type=radio name="PC3a" value=0><input type=radio name="PC3a" value=1><input type=radio name="PC3a" value=2>&nbsp;
+Good at sports or other activity that integrates vision with action. 擅长运动或其他将视觉与行动相结合的活动。
+</p>
+
+<p>
+<input type=radio name="PO3a" value=0><input type=radio name="PO3a" value=1><input type=radio name="PO3a" value=2>&nbsp;
+Quickly do accurate arithmetic. 快速做准确的算术。
+</p>
+
+<p>
+<input type=radio name="Pza" value=0><input type=radio name="Pza" value=1><input type=radio name="Pza" value=2>&nbsp;
+Skilled at using and even fixing mechanical devices. 擅长使用甚至修理机械设备。
+</p>
+
+<p>
+<input type=radio name="PC4a" value=0><input type=radio name="PC4a" value=1><input type=radio name="PC4a" value=2>&nbsp;
+Pay attention to your body, your mood, and your grooming. 注意你的身体、心情和仪容。
+</p>
+
+<p>
+<input type=radio name="PO4a" value=0><input type=radio name="PO4a" value=1><input type=radio name="PO4a" value=2>&nbsp;
+When thinking, juggle multiple variables at once. 思考时，同时处理多个变量。
+</p>
+
+<p>
+<input type=radio name="PC3b" value=0><input type=radio name="PC3b" value=1><input type=radio name="PC3b" value=2>&nbsp;
+Skillfully move and throw objects through space, even as others and objects are moving too (like in basketball or soccer). 熟练地移动和投掷物体通过空间，即使其他物体和物体也在移动（如篮球或足球）。
+</p>
+
+<p>
+<input type=radio name="PO3b" value=0><input type=radio name="PO3b" value=1><input type=radio name="PO3b" value=2>&nbsp;
+Learn best using a physical method such as following a finger or pointer, or referencing a mental grid. 使用有身体接触的方法学习最好，例如跟随手指或指针，或引用心理网格。
+</p>
+
+<p>
+<input type=radio name="Pzb" value=0><input type=radio name="Pzb" value=1><input type=radio name="Pzb" value=2>&nbsp;
+When learning, pull together what you see and touch, and how elements move, to build a practical, working understanding. 在学习时，汇集你所看到和触摸的东西，以及如何调动关键部分，以建立实用的工作理解。
+</p>
+
+
+<p>
+<input type=radio name="PC4b" value=0><input type=radio name="PC4b" value=1><input type=radio name="PC4b" value=2>&nbsp;
+Keenly feel inner sensations and signals such as level of comfort, energy, and hunger. 敏锐地感受到内心的感觉和信号，如舒适度、精力和饥饿感。
+</p>
+
+<p>
+<input type=radio name="PO4b" value=0><input type=radio name="PO4b" value=1><input type=radio name="PO4b" value=2>&nbsp;
+Tend to weigh pros and cons, evaluate options in light of risk and uncertainty, and calculate and compare rewards. 倾向于权衡利弊，根据风险和不确定性评估选择，并计算和比较回报。
+</p>
+
+<p>
+<input type=radio name="PC3c" value=0><input type=radio name="PC3c" value=1><input type=radio name="PC3c" value=2>&nbsp;
+Stay alert for shadowy threats and others' interference. 警惕潜在的威胁和他人的干扰。
+</p>
+
+<p>
+<input type=radio name="PO3c" value=0><input type=radio name="PO3c" value=1><input type=radio name="PO3c" value=2>&nbsp;
+Easily name objects, such as different kinds of cars, plants, etc. 轻松命名对象，如不同类型的汽车、植物等。
+</p>
+
+<p>
+<input type=radio name="Pzc" value=0><input type=radio name="Pzc" value=1><input type=radio name="Pzc" value=2>&nbsp;
+Easily construct and run a simulation or model in your mind's eye.在你的脑海中轻松构建以及运行模拟或模型。
+</p>
+
+<p>
+<input type=radio name="PC4c" value=0><input type=radio name="PC4c" value=1><input type=radio name="PC4c" value=2>&nbsp;
+May literally feel how someone else feels. 可能真的能感受到别人的感受。
+</p>
+
+<p>
+<input type=radio name="PO4c" value=0><input type=radio name="PO4c" value=1><input type=radio name="PO4c" value=2>&nbsp;
+Notice leverage points to exert subtle influence. 注意杠杆点施加微妙的影响。
+</p>
+
+<p>
+<input type=radio name="PC3d" value=0><input type=radio name="PC3d" value=1><input type=radio name="PC3d" value=2>&nbsp;
+Have a strong sense of personal space. 有强烈的个人空间感。
+</p>
+
+<p>
+<input type=radio name="PO3d" value=0><input type=radio name="PO3d" value=1><input type=radio name="PO3d" value=2>&nbsp;
+Never get confused about left versus right. 永远不会对左对右感到困惑。
+</p>
+
+<p>
+<input type=radio name="Pzd" value=0><input type=radio name="Pzd" value=1><input type=radio name="Pzd" value=2>&nbsp;
+Like to figure out how something works. 想弄清楚某事是如何运作的。
+</p>
+
+<p>
+<input type=radio name="PC4d" value=0><input type=radio name="PC4d" value=1><input type=radio name="PC4d" value=2>&nbsp;
+Good at using props that require balance such as a bicycle or snowboard. 擅长使用需要平衡的道具，如自行车或滑雪板。
+</p>
+
+<p>
+<input type=radio name="PO4d" value=0><input type=radio name="PO4d" value=1><input type=radio name="PO4d" value=2>&nbsp;
+Link distantly-related data to get "ah-ha" solutions.链接远程相关数据以获得“茅塞顿开”的解决方案。
+</p>
+
+
+<hr>
+
+<p align=center><b>第八部分，共九部分</b></p>
+<p>
+<input type=radio name="T5a" value=0><input type=radio name="T5a" value=1><input type=radio name="T5a" value=2>&nbsp;
+Analyze others' facial expressions. 分析他人的面部表情。
+</p>
+
+<p>
+<input type=radio name="T6a" value=0><input type=radio name="T6a" value=1><input type=radio name="T6a" value=2>&nbsp;
+See how events connect. 了解事件是如何连接的。
+</p>
+
+<p>
+<input type=radio name="T5b" value=0><input type=radio name="T5b" value=1><input type=radio name="T5b" value=2>&nbsp;
+Quickly notice how people respond to you and then adjust your behavior to aid, conform, appease or be romantic. 快速注意人们如何回应你，然后调整你的行为来帮助、顺从、安抚或浪漫。
+</p>
+
+<p>
+<input type=radio name="T6b" value=0><input type=radio name="T6b" value=1><input type=radio name="T6b" value=2>&nbsp;
+Foresee what will come next and the future. 预见接下来和未来会发生什么。
+</p>
+
+<p>
+<input type=radio name="T5c" value=0><input type=radio name="T5c" value=1><input type=radio name="T5c" value=2>&nbsp;
+Attend to visual details, adjusting them to be precise. 注意视觉细节，精确调整它们。
+</p>
+
+<p>
+<input type=radio name="T6c" value=0><input type=radio name="T6c" value=1><input type=radio name="T6c" value=2>&nbsp;
+Imagine yourself within a bigger picture. 在大局中想象自己。
+</p>
+
+<p>
+<input type=radio name="T5d" value=0><input type=radio name="T5d" value=1><input type=radio name="T5d" value=2>&nbsp;
+Commit details to memory for later use. 将详细信息存到短时记忆中供稍后使用。
+</p>
+
+<p>
+<input type=radio name="T6d" value=0><input type=radio name="T6d" value=1><input type=radio name="T6d" value=2>&nbsp;
+Interpret a face or image within a group or context, sensing what's going on. 解读群体的脸部或环境中的图像，以感应到正在发生的事情。
+</p>
+
+<p>
+<input type=radio name="T5e" value=0><input type=radio name="T5e" value=1><input type=radio name="T5e" value=2>&nbsp;
+Can get picky with details or factual accuracy. 可能会对细节或事实准确性挑剔。
+</p>
+
+<p>
+<input type=radio name="T6e" value=0><input type=radio name="T6e" value=1><input type=radio name="T6e" value=2>&nbsp;
+Notice symbols and their hidden meaning. 注意符号及其隐藏的含义。
+</p>
+
+<p>
+<input type=radio name="T5f" value=0><input type=radio name="T5f" value=1><input type=radio name="T5f" value=2>&nbsp;
+Easily feel awkward or embarrassed. 很容易感到尴尬或窘迫。
+</p>
+
+<p>
+<input type=radio name="T6f" value=0><input type=radio name="T6f" value=1><input type=radio name="T6f" value=2>&nbsp;
+Just "know" things but cannot say why. 只是“知道”事情，但无法说为什么。
+</p>
+
+
+<hr>
+
+<p align=center><b>第九部分，共九部分</b></p>
+<p>
+<input type=radio name="O1a" value=0><input type=radio name="O1a" value=1><input type=radio name="O1a" value=2>&nbsp;
+Focus on visual data as evidence. 专注于视觉数据作为证据。
+</p>
+
+<p>
+<input type=radio name="O2a" value=0><input type=radio name="O2a" value=1><input type=radio name="O2a" value=2>&nbsp;
+Delight in visual beauty. 享受视觉美。
+</p>
+
+<p>
+<input type=radio name="O1b" value=0><input type=radio name="O1b" value=1><input type=radio name="O1b" value=2>&nbsp;
+Mentally manipulate a 3-D object, to rotate, disassemble or rearrange it. 在精神上操纵一个三维物体，以旋转、拆卸或重新排列它。
+</p>
+
+<p>
+<input type=radio name="O2b" value=0><input type=radio name="O2b" value=1><input type=radio name="O2b" value=2>&nbsp;
+View the richness of a photograph or painting. 观看照片或绘画的丰富性。
+</p>
+
+<p>
+<input type=radio name="O1c" value=0><input type=radio name="O1c" value=1><input type=radio name="O1c" value=2>&nbsp;
+Like to be visually precise, such as having a picture line up on the wall just so. 喜欢视觉上精确，例如在墙上排列图片。
+</p>
+
+<p>
+<input type=radio name="O2c" value=0><input type=radio name="O2c" value=1><input type=radio name="O2c" value=2>&nbsp;
+Notice how colors, hues, textures, shapes, shading and perspectives fit aesthetically. 注意颜色、色调、纹理、形状、阴影和视角如何美观贴合。
+</p>
+
+<p>
+<input type=radio name="O1d" value=0><input type=radio name="O1d" value=1><input type=radio name="O1d" value=2>&nbsp;
+Analyze spaces and objects like an engineer. 像工程师一样分析空间和物体。
+</p>
+
+<p>
+<input type=radio name="O2d" value=0><input type=radio name="O2d" value=1><input type=radio name="O2d" value=2>&nbsp;
+Gain a visual impression of a person. 获得一个人的视觉印象。
+</p>
+
+<p>
+<input type=radio name="O1e" value=0><input type=radio name="O1e" value=1><input type=radio name="O1e" value=2>&nbsp;
+Read charts and diagrams with ease. 轻松阅读（带有坐标的以及有函数关系的）图表。
+</p>
+
+<p>
+<input type=radio name="O2e" value=0><input type=radio name="O2e" value=1><input type=radio name="O2e" value=2>&nbsp;
+Get a lot of information from a person's body language. 从一个人的肢体语言中获得很多信息。
+</p>
+
+<p>
+<input type=radio name="O1f" value=0><input type=radio name="O1f" value=1><input type=radio name="O1f" value=2>&nbsp;
+Navigate a complex user interface. 浏览复杂的用户界面。【user interface：用户界面，即UI】
+</p>
+
+<p>
+<input type=radio name="O2f" value=0><input type=radio name="O2f" value=1><input type=radio name="O2f" value=2>&nbsp;
+Appreciate life's innate beauty. 欣赏生活中的内在的、固有的美丽。
+</p>
+<hr><p align=center>
+<b>计算你的结果</b>
+</p><p>
+你回答完了！在点击“提交”之前，请注明以下人口统计详细信息，以帮助我们继续研究。这些数据是匿名存储的，不会与你的辅导员共享。
+</p>
+<p>
+Your sex: 
+性别：
+<select name="sex">
+	<option selected>
+	<option value="female">女
+	<option value="male">男
+</select>
+<p>
+
+<p>
+Your handedness: 
+惯用手：
+<select name="handedness">
+	<option selected>
+	<option value="right">右手
+	<option value="left">左手
+</select>
+<p>
+
+<p>
+Your age: 
+年龄：
+<input type=text name="age" size=2 maxlength=2>
+</p>
+
+<p>
+Which of the following <b>best</b> represents your background, career, and training?
+以下哪项<b>最能</b>代表你的背景、职业和培训？
+<br>
+<select name="profession">
+	<option selected> 
+	<option value="Athletics/Outdoors">田径/户外Athletics/Outdoors
+	<option value="Business/Management">业务/管理Business/Management
+	<option value="Childcare/Homemaking">儿童保育/家庭制作Childcare/Homemaking
+	<option value="Communications/Media">通信/媒体Communications/Media
+	<option value="Computers/Technology">计算机/技术Computers/Technology
+	<option value="Cross-Cultural/Diplomacy">跨文化/外交Cross-Cultural/Diplomacy
+	<option value="Counseling/Psychology">咨询/心理学Counseling/Psychology
+	<option value="Engineering/Science">工程/科学Engineering/Science
+	<option value="Entrepreneurship">创业精神Entrepreneurship
+	<option value="Fine & Performing Arts">美术和表演艺术Fine & Performing Arts
+	<option value="Government/Legal">政府/法律Government/Legal
+	<option value="Hospitality/Service">招待/服务Hospitality/Service
+	<option value="Math/Statistics">数学/统计学Math/Statistics
+	<option value="Medicine/Health">医学/健康Medicine/Health
+	<option value="Military/Law Enforcement">军事/执法部门Military/Law Enforcement
+	<option value="Religious/Spiritual">宗教/精神Religious/Spiritual
+	<option value="Teaching/Training">教学/培训Teaching/Training
+	<option value="Transport/Manual Labor">运输/人工Transport/Manual Labor
+</select>
+</p>
+
+<p>
+Your Myers-Briggs type code? 
+你的MBTI类型？
+<select name="typecode">
+	<option selected> 
+	<option value="Unknown">不知道
+	<option value="ESTP">ESTP 
+	<option value="ISTP">ISTP 
+	<option value="ESFP">ESFP 
+	<option value="ISFP">ISFP 
+	<option value="ESTJ">ESTJ 
+	<option value="ISTJ">ISTJ 
+	<option value="ESFJ">ESFJ 
+	<option value="ISFJ">ISFJ 
+	<option value="ENTJ">ENTJ 
+	<option value="INTJ">INTJ 
+	<option value="ENTP">ENTP 
+	<option value="INTP">INTP 
+	<option value="ENFJ">ENFJ 
+	<option value="INFJ">INFJ 
+	<option value="ENFP">ENFP 
+	<option value="INFP">INFP
+</select>
+</p>
+
+<p>
+Your Enneagram type? 
+你九型人格类型？【如5w6的“5”】
+<select name="enneagram1">
+	<option selected> 
+	<option>不知道
+	<option value="1">1 
+	<option value="2">2 
+	<option value="3">3 
+	<option value="4">4 
+	<option value="5">5 
+	<option value="6">6 
+	<option value="7">7
+	<option value="8">8 
+	<option value="9">9
+</select>
+</p>
+
+<p>
+Your Enneagram wing or alternate type? 
+你的九型人格侧翼？【如5w6的“6”】
+<select name="enneagram2">
+	<option selected> 
+	<option>不知道
+	<option value="1">1 
+	<option value="2">2 
+	<option value="3">3 
+	<option value="4">4 
+	<option value="5">5 
+	<option value="6">6 
+	<option value="7">7
+	<option value="8">8 
+	<option value="9">9
+</select>
+</p>
+
+
+
+<hr><p align=center>
+<b>本页面仅仅是一个翻译文件</b>
+</p><p>
+将你的结果记录下来，然后填入到原网站，并点击下方那个与原网站对应的按钮“Submit”即可获取结果（本页点击只能进行跳转）。
+</p>
+
+<p align=center>
+<a href="http://www.neuropq.com/">Submit</a>
+</p>
+
+
+
+
+<p>
+点击原网站提交后，你会看到一整段看似乱码的结果，那就是你的结果，将它们<b>复制粘贴</b>保存下来。
+</p>
+
+</td></tr>
+</table>
+</p>
+
+</body>
+</html>
