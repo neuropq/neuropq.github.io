@@ -1,0 +1,882 @@
+<html>
+
+<head>
+
+<script language="JavaScript">
+
+// randomly fill out the questionnaire
+function fill()
+	{
+	var i,j,item="",num=0;
+	var radiobut;
+	var region = ['Fp1','Fp2','F7','F8','F3','Fz','F4','FC5','FC6','T3','T4','T5','T6','C3','Cz','C4','PC3','PO3','Pz','PC4','PO4','O1','O2'];
+	var count = [8,8,6,6,4,4,4,4,4,6,6,6,6,4,4,4,4,4,4,4,4,6,6];
+	var letter = ['a','b','c','d','e','f','g','h'];
+
+	// fill-in each region and its facets
+	for(i=0; i<23; i++) {
+		for(j=0; j<count[i]; j++) { 
+			num = parseInt(Math.random()*3); // value 0 to 2
+			radiobut = document.getElementsByName(region[i]+letter[j]);
+			radiobut[num].checked = true;
+			}
+		}
+	return;
+	}
+</script>
+
+</head>
+
+
+
+<body>
+
+<p align=center>
+<table width=625>
+<tr><td>
+
+<form action="../cgi/116survey.pl" method=post>
+
+<p align=center>
+<b>NeuroPQ Online</b>
+</p>
+
+<p>
+Welcome to the NeuroPQ! This questionnaire helps determine how you use 23 different regions of your brain! It is based on neuroscience research and the author's actual brain imaging results of hundreds of people.
+</p>
+<p>
+Each region of your brain helps you do various concrete and abstract tasks. By completing the NeuroPQ, you will get a profile of which tasks you tend to excel at or that engage you. The result is a unique visual portrait of your brain.
+</p>
+
+<hr>
+
+<p align=center><b>
+Activate Your Inventory
+</b></p>
+
+<p>
+Facilitator:
+<select name="facilitator">
+<option selected value="Unknown">Don't have one yet
+<option value="Allan Duncan">Allan Duncan
+<option value="Ann Holm">Ann Holm
+<option value="Byron Almen">Byron Almen
+<option value="Camronn Huff">Camronn Huff
+<option value="Cara Cocuzza">Cara Cocuzza
+<option value="Cecile Riddle">Cecile Riddle
+<option value="Charles Morehead">Charles Morehead
+<option value="CJ Fitzsimons">CJ Fitzsimons
+<option value="Dan Green">Dan Green
+<option value="Dario Nardi">Dario Nardi
+<option value="David Hughey">David Hughey
+<option value="David Piltz">David Piltz
+<option value="Debra Woods">Debra Woods
+<option value="Denise OSullivan">Denise O'Sullivan
+<option value="Doris Fuellgrabe">Doris Fuellgrabe
+<option value="Edward Stambaugh">Dr. Edward Stambaugh II
+<option value="Fusae Harada">Fusae Harada
+<option value="Heather Pallas">Heather Pallas
+<option value="Jane Kise">Jane Kise
+<option value="Jeff Hart">Dr. Jeff Hart
+<option value="Kevin Murphy">Kevin Murphy
+<option value="Lisa Wellington">Lisa Wellington
+<option value="Lori Zucchino">Lori Zucchino
+<option value="Mary Landell">Mary Landell
+<option value="Mary Parish">Mary Parish
+<option value="Dario Nardi">Mario Sikora
+<option value="Moosa Al Jowaiser">Dr. Moosa Al-Jowaiser
+<option value="Nicole Gruel">Nicole Gruel
+<option value="Pam FoxRollin">Pam Fox Rollin
+<option value="Paul Gale Baker">Paul Gale-Baker
+<option value="Dario Nardi">Peter McNab
+<option value="Roger Pearman">Roger Pearman
+<option value="Stephanie Kindt">Stephanie Kindt
+<option value="Steven Price">Steven Price
+<option value="Steve Whiteford">Steve Whiteford
+<option value="Sue Blair">Sue Blair
+<option value="Susan Anderson">Susan Anderson
+<option value="Susan Nash">Susan Nash
+<option value="Susan Zadeh">Susan Zadah
+</select>
+</p>
+
+<p>
+No facilitator? We will contact you to deliver your results at a US $9 cost (or $3 promo). This paid service aids research. (Note: Use the same email address here that you use when you pay, so we can deliver your results!) 
+</p>
+
+<p>
+Your Full Name: 
+<input type="text" name="username" size=30 required="required">
+</p>
+
+<p>
+Your E-mail (to get results):
+<input type="text" name="contact" size=30 required="required">
+</p>
+
+<hr>
+
+<p align=center><b>
+Instructions
+</b></p>
+
+<p>
+Along a 3-point scale, rate each phrase below as "not you" (left button), "somewhat you" (middle button), or "exactly you" (right button). If you relate to only some parts of a phrase, rate it in the middle. If you find a phrase awkwardly phrased, difficult to understand, too specific or general, etc. then consider it is less like you. 
+</p>
+<p>
+Try to go quickly. Go with your first impression or gut feel.
+</p>
+<p>
+Note: Your ratings are normalized against an average. If you rate everything high or low, you will come out average. Allow a mix of high, medium, and low ratings.
+</p>
+
+
+<hr>
+
+<p align=center><b>Part 1 of 9</b></p>
+<p>
+<input type=radio name="Fp1a" value=0><input type=radio name="Fp1a" value=1><input type=radio name="Fp1a" value=2>&nbsp;
+Easily stay focused.
+</p>
+
+<p>
+<input type=radio name="Fp2a" value=0><input type=radio name="Fp2a" value=1><input type=radio name="Fp2a" value=2>&nbsp;
+Stay open to new data and experiences.
+</p>
+
+<p>
+<input type=radio name="Fp1b" value=0><input type=radio name="Fp1b" value=1><input type=radio name="Fp1b" value=2>&nbsp;
+Quickly make decisions, even from among several options. 
+</p>
+
+<p>
+<input type=radio name="Fp2b" value=0><input type=radio name="Fp2b" value=1><input type=radio name="Fp2b" value=2>&nbsp;
+Seek stimulating ideas and activities. 
+</p>
+
+<p>
+<input type=radio name="Fp1c" value=0><input type=radio name="Fp1c" value=1><input type=radio name="Fp1c" value=2>&nbsp;
+Organized, results-oriented, and sharp.
+</p>
+
+<p>
+<input type=radio name="Fp2c" value=0><input type=radio name="Fp2c" value=1><input type=radio name="Fp2c" value=2>&nbsp;
+Engage in a creative process, often mixing and matching ideas.
+</p>
+
+<p>
+<input type=radio name="Fp1d" value=0><input type=radio name="Fp1d" value=1><input type=radio name="Fp1d" value=2>&nbsp;
+Filter out distractions and criticism.   
+</p>
+
+<p>
+<input type=radio name="Fp2d" value=0><input type=radio name="Fp2d" value=1><input type=radio name="Fp2d" value=2>&nbsp;
+Work on multiple creative projects at once.   
+</p>
+
+<p>
+<input type=radio name="Fp1e" value=0><input type=radio name="Fp1e" value=1><input type=radio name="Fp1e" value=2>&nbsp;
+Evaluate situations according to a principle.
+</p>
+
+<p>
+<input type=radio name="Fp2e" value=0><input type=radio name="Fp2e" value=1><input type=radio name="Fp2e" value=2>&nbsp;
+Enjoy brainstorming.
+</p>
+
+<p>
+<input type=radio name="Fp1f" value=0><input type=radio name="Fp1f" value=1><input type=radio name="Fp1f" value=2>&nbsp;
+Notice and correct errors.
+</p>
+
+<p>
+<input type=radio name="Fp2f" value=0><input type=radio name="Fp2f" value=1><input type=radio name="Fp2f" value=2>&nbsp;
+Reflect on new data, applying it to yourself and how it fits in your life.
+</p>
+
+<p>
+<input type=radio name="Fp1g" value=0><input type=radio name="Fp1g" value=1><input type=radio name="Fp1g" value=2>&nbsp;
+Drive to clarify needs, goals, and ideas. 
+</p>
+
+<p>
+<input type=radio name="Fp2g" value=0><input type=radio name="Fp2g" value=1><input type=radio name="Fp2g" value=2>&nbsp;
+Reflect on criticism from others, for self-awareness. 
+</p>
+
+<p>
+<input type=radio name="Fp1h" value=0><input type=radio name="Fp1h" value=1><input type=radio name="Fp1h" value=2>&nbsp;
+Show confidence (regardless of your actual thoughts/feelings).
+</p>
+
+<p>
+<input type=radio name="Fp2h" value=0><input type=radio name="Fp2h" value=1><input type=radio name="Fp2h" value=2>&nbsp;
+You are easy to read, showing your reactions on your face.
+</p>
+
+<hr>
+
+<p align=center><b>Part 2 of 9</b></p><p>
+<input type=radio name="F7a" value=0><input type=radio name="F7a" value=1><input type=radio name="F7a" value=2>&nbsp;
+Mirror others' behavior to build rapport.
+</p>
+
+<p>
+<input type=radio name="F8a" value=0><input type=radio name="F8a" value=1><input type=radio name="F8a" value=2>&nbsp;
+Accurately visualize the details of a place or event. 
+</p>
+
+<p>
+<input type=radio name="F7b" value=0><input type=radio name="F7b" value=1><input type=radio name="F7b" value=2>&nbsp;
+Quickly pick up skills merely by observing others.
+</p>
+
+<p>
+<input type=radio name="F8b" value=0><input type=radio name="F8b" value=1><input type=radio name="F8b" value=2>&nbsp;
+Stick to your identify and beliefs.
+</p>
+
+<p>
+<input type=radio name="F7c" value=0><input type=radio name="F7c" value=1><input type=radio name="F7c" value=2>&nbsp;
+Often imagine someone else's situation, maybe with empathy.
+</p>
+
+<p>
+<input type=radio name="F8c" value=0><input type=radio name="F8c" value=1><input type=radio name="F8c" value=2>&nbsp;
+Focus on what holds true regardless of the details of a situation.
+</p>
+
+<p>
+<input type=radio name="F7d" value=0><input type=radio name="F7d" value=1><input type=radio name="F7d" value=2>&nbsp;
+Imaginatively visualize another place or time. 
+</p>
+
+<p>
+<input type=radio name="F8d" value=0><input type=radio name="F8d" value=1><input type=radio name="F8d" value=2>&nbsp;
+Evaluate people, activities, and values in terms of like or dislike. 
+</p>
+
+<p>
+<input type=radio name="F7e" value=0><input type=radio name="F7e" value=1><input type=radio name="F7e" value=2>&nbsp;
+Notice what fits a situation and make inferences about it.
+</p>
+
+<p>
+<input type=radio name="F8e" value=0><input type=radio name="F8e" value=1><input type=radio name="F8e" value=2>&nbsp;
+Remain modest.
+</p>
+
+<p>
+<input type=radio name="F7f" value=0><input type=radio name="F7f" value=1><input type=radio name="F7f" value=2>&nbsp;
+Understand things using analogies.
+</p>
+
+<p>
+<input type=radio name="F8f" value=0><input type=radio name="F8f" value=1><input type=radio name="F8f" value=2>&nbsp;
+Not embellish as you recall details with high accuracy.
+</p>
+
+<hr><p align=center><b>Part 3 of 9</b></p>
+<p>
+<input type=radio name="F3a" value=0><input type=radio name="F3a" value=1><input type=radio name="F3a" value=2>&nbsp;
+Easily follow a chain of reasoning.
+</p>
+
+<p>
+<input type=radio name="Fza" value=0><input type=radio name="Fza" value=1><input type=radio name="Fza" value=2>&nbsp;
+Given what's known or likely, come up with a best guess or hypothesis.
+</p>
+
+<p>
+<input type=radio name="F4a" value=0><input type=radio name="F4a" value=1><input type=radio name="F4a" value=2>&nbsp;
+Easily follow abstract ideas.
+</p>
+
+<p>
+<input type=radio name="F3b" value=0><input type=radio name="F3b" value=1><input type=radio name="F3b" value=2>&nbsp;
+Often backtrack to correct thinking due to logic errors.
+</p>
+
+<p>
+<input type=radio name="Fzb" value=0><input type=radio name="Fzb" value=1><input type=radio name="Fzb" value=2>&nbsp;
+Like to offer predictions, pose questions, generalize, or interpret what's happening.
+</p>
+
+<p>
+<input type=radio name="F4b" value=0><input type=radio name="F4b" value=1><input type=radio name="F4b" value=2>&nbsp;
+Accurately place concepts by considering multiple categories to find a best-fit.
+</p>
+
+<p>
+<input type=radio name="F3c" value=0><input type=radio name="F3c" value=1><input type=radio name="F3c" value=2>&nbsp;
+Wordsmith with precision to convey complex ideas in a technical way.
+</p>
+
+<p>
+<input type=radio name="Fzc" value=0><input type=radio name="Fzc" value=1><input type=radio name="Fzc" value=2>&nbsp;
+Quick to speculate, make inferences, and offer conclusions.
+</p>
+
+<p>
+<input type=radio name="F4c" value=0><input type=radio name="F4c" value=1><input type=radio name="F4c" value=2>&nbsp;
+Form compelling metaphors, where the parts of parallel ideas match up.
+</p>
+
+<p>
+<input type=radio name="F3d" value=0><input type=radio name="F3d" value=1><input type=radio name="F3d" value=2>&nbsp;
+Mentally plan the steps to complete a task.
+</p>
+
+<p>
+<input type=radio name="Fzd" value=0><input type=radio name="Fzd" value=1><input type=radio name="Fzd" value=2>&nbsp;
+Influence others by giving suggestions.
+</p>
+
+<p>
+<input type=radio name="F4d" value=0><input type=radio name="F4d" value=1><input type=radio name="F4d" value=2>&nbsp;
+Get puns, make jokes, and offer humorous insights.
+</p>
+
+
+<hr>
+
+<p align=center><b>Part 4 of 9</b></p>
+<p>
+<input type=radio name="FC5a" value=0><input type=radio name="FC5a" value=1><input type=radio name="FC5a" value=2>&nbsp;
+Excel at quickly completing complex tasks.
+</p>
+
+<p>
+<input type=radio name="FC6a" value=0><input type=radio name="FC6a" value=1><input type=radio name="FC6a" value=2>&nbsp;
+Comfortable with emotional complexity.
+</p>
+
+<p>
+<input type=radio name="FC5b" value=0><input type=radio name="FC5b" value=1><input type=radio name="FC5b" value=2>&nbsp;
+Speak and act precisely and efficiently according to a set of rules.
+</p>
+
+<p>
+<input type=radio name="FC6b" value=0><input type=radio name="FC6b" value=1><input type=radio name="FC6b" value=2>&nbsp;
+Easily name shades of feeling.
+</p>
+
+<p>
+<input type=radio name="FC5c" value=0><input type=radio name="FC5c" value=1><input type=radio name="FC5c" value=2>&nbsp;
+Monitor yourself and say "no" to impulses, emotional appeal, and mental clutter.
+</p>
+
+<p>
+<input type=radio name="FC6c" value=0><input type=radio name="FC6c" value=1><input type=radio name="FC6c" value=2>&nbsp;
+Monitor one's own and others' feelings, knowing how words and actions impact people emotionally.
+</p>
+
+<p>
+<input type=radio name="FC5d" value=0><input type=radio name="FC5d" value=1><input type=radio name="FC5d" value=2>&nbsp;
+Rapidly organize ideas into a fluent presentation.
+</p>
+
+<p>
+<input type=radio name="FC6d" value=0><input type=radio name="FC6d" value=1><input type=radio name="FC6d" value=2>&nbsp;
+Speak dramatically, and like art, music, writing and such to be evocative.
+</p>
+
+
+<hr>
+
+<p align=center><b>Part 5 of 9</b></p>
+<p>
+<input type=radio name="C3a" value=0><input type=radio name="C3a" value=1><input type=radio name="C3a" value=2>&nbsp;
+Notice and follow scripts, formulas, templates, and guides.
+</p>
+
+<p>
+<input type=radio name="Cza" value=0><input type=radio name="Cza" value=1><input type=radio name="Cza" value=2>&nbsp;
+Highly driven physically or mentally.
+</p>
+
+<p>
+<input type=radio name="C4a" value=0><input type=radio name="C4a" value=1><input type=radio name="C4a" value=2>&nbsp;
+Draw, paint, sculpt, or otherwise excel at artistic endeavors, making forms come alive.
+</p>
+
+<p>
+<input type=radio name="C3b" value=0><input type=radio name="C3b" value=1><input type=radio name="C3b" value=2>&nbsp;
+Draw accurate charts and diagrams, take precise measures, and color inside the lines.
+</p>
+
+<p>
+<input type=radio name="Czb" value=0><input type=radio name="Czb" value=1><input type=radio name="Czb" value=2>&nbsp;
+Strongly motivated toward success, often in multiple interests, able to coordinate many elements and bring them together.
+</p>
+
+<p>
+<input type=radio name="C4b" value=0><input type=radio name="C4b" value=1><input type=radio name="C4b" value=2>&nbsp;
+Express the artistic qualities of an experience.
+</p>
+
+<p>
+<input type=radio name="C3c" value=0><input type=radio name="C3c" value=1><input type=radio name="C3c" value=2>&nbsp;
+Memorize and execute a sequence of moves (dance steps, etc.).
+</p>
+
+<p>
+<input type=radio name="Czc" value=0><input type=radio name="Czc" value=1><input type=radio name="Czc" value=2>&nbsp;
+Sensitive to sensory input, often with fine motor skills.
+</p>
+
+<p>
+<input type=radio name="C4c" value=0><input type=radio name="C4c" value=1><input type=radio name="C4c" value=2>&nbsp;
+Flow with a natural, casual grace.
+</p>
+
+
+<p>
+<input type=radio name="C3d" value=0><input type=radio name="C3d" value=1><input type=radio name="C3d" value=2>&nbsp;
+Draw upon facts and figures.
+</p>
+
+<p>
+<input type=radio name="Czd" value=0><input type=radio name="Czd" value=1><input type=radio name="Czd" value=2>&nbsp;
+Move energetically with determination.
+</p>
+
+<p>
+<input type=radio name="C4d" value=0><input type=radio name="C4d" value=1><input type=radio name="C4d" value=2>&nbsp;
+Dance with rhythm, improvising moves that draw attention.
+</p>
+
+
+<hr>
+
+<p align=center><b>Part 6 of 9</b></p>
+<p>
+<input type=radio name="T3a" value=0><input type=radio name="T3a" value=1><input type=radio name="T3a" value=2>&nbsp;
+Focus on word content, hearing what is actually said. 
+</p>
+
+<p>
+<input type=radio name="T4a" value=0><input type=radio name="T4a" value=1><input type=radio name="T4a" value=2>&nbsp;
+Hear melody, voice tone, and intent. 
+</p>
+
+<p>
+<input type=radio name="T3b" value=0><input type=radio name="T3b" value=1><input type=radio name="T3b" value=2>&nbsp;
+Attend to proper grammar, usage, and enunciation.
+</p>
+
+<p>
+<input type=radio name="T4b" value=0><input type=radio name="T4b" value=1><input type=radio name="T4b" value=2>&nbsp;
+Good at speaking in different accents or humming a melody.
+</p>
+
+<p>
+<input type=radio name="T3c" value=0><input type=radio name="T3c" value=1><input type=radio name="T3c" value=2>&nbsp;
+Distinguish when use of one word over another greatly alters a meaning.
+</p>
+
+<p>
+<input type=radio name="T4c" value=0><input type=radio name="T4c" value=1><input type=radio name="T4c" value=2>&nbsp;
+Detect when someone speaks with bad intent.
+</p>
+
+
+<p>
+<input type=radio name="T3d" value=0><input type=radio name="T3d" value=1><input type=radio name="T3d" value=2>&nbsp;
+Hear music in a technical way.  
+</p>
+
+<p>
+<input type=radio name="T4d" value=0><input type=radio name="T4d" value=1><input type=radio name="T4d" value=2>&nbsp;
+Notice when something "resonates" personally or when a person's voice doesn't match their words, betraying phoniness.  
+</p>
+
+<p>
+<input type=radio name="T3e" value=0><input type=radio name="T3e" value=1><input type=radio name="T3e" value=2>&nbsp;
+Easily suppress your sexual impulses or when feeling pain.
+</p>
+
+<p>
+<input type=radio name="T4e" value=0><input type=radio name="T4e" value=1><input type=radio name="T4e" value=2>&nbsp;
+Notice ethics violations. 
+</p>
+
+<p>
+<input type=radio name="T3f" value=0><input type=radio name="T3f" value=1><input type=radio name="T3f" value=2>&nbsp;
+Use talk to get through awkward situations.
+</p>
+
+<p>
+<input type=radio name="T4f" value=0><input type=radio name="T4f" value=1><input type=radio name="T4f" value=2>&nbsp;
+Often have to suppress a hostile reaction or feeling irritated. 
+</p>
+
+
+<hr>
+
+<p align=center><b>Part 7 of 9</b></p>
+<p>
+<input type=radio name="PC3a" value=0><input type=radio name="PC3a" value=1><input type=radio name="PC3a" value=2>&nbsp;
+Good at sports or other activity that integrates vision with action. 
+</p>
+
+<p>
+<input type=radio name="PO3a" value=0><input type=radio name="PO3a" value=1><input type=radio name="PO3a" value=2>&nbsp;
+Quickly do accurate arithmetic.
+</p>
+
+<p>
+<input type=radio name="Pza" value=0><input type=radio name="Pza" value=1><input type=radio name="Pza" value=2>&nbsp;
+Skilled at using and even fixing mechanical devices. 
+</p>
+
+<p>
+<input type=radio name="PC4a" value=0><input type=radio name="PC4a" value=1><input type=radio name="PC4a" value=2>&nbsp;
+Pay attention to your body, your mood, and your grooming.
+</p>
+
+<p>
+<input type=radio name="PO4a" value=0><input type=radio name="PO4a" value=1><input type=radio name="PO4a" value=2>&nbsp;
+When thinking, juggle multiple variables at once.
+</p>
+
+<p>
+<input type=radio name="PC3b" value=0><input type=radio name="PC3b" value=1><input type=radio name="PC3b" value=2>&nbsp;
+Skillfully move and throw objects through space, even as others and objects are moving too (like in basketball or soccer).
+</p>
+
+<p>
+<input type=radio name="PO3b" value=0><input type=radio name="PO3b" value=1><input type=radio name="PO3b" value=2>&nbsp;
+Learn best using a physical method such as following a finger or pointer, or referencing a mental grid.
+</p>
+
+<p>
+<input type=radio name="Pzb" value=0><input type=radio name="Pzb" value=1><input type=radio name="Pzb" value=2>&nbsp;
+When learning, pull together what you see and touch, and how elements move, to build a practical, working understanding.
+</p>
+
+
+<p>
+<input type=radio name="PC4b" value=0><input type=radio name="PC4b" value=1><input type=radio name="PC4b" value=2>&nbsp;
+Keenly feel inner sensations and signals such as level of comfort, energy, and hunger.
+</p>
+
+<p>
+<input type=radio name="PO4b" value=0><input type=radio name="PO4b" value=1><input type=radio name="PO4b" value=2>&nbsp;
+Tend to weigh pros and cons, evaluate options in light of risk and uncertainty, and calculate and compare rewards.
+</p>
+
+<p>
+<input type=radio name="PC3c" value=0><input type=radio name="PC3c" value=1><input type=radio name="PC3c" value=2>&nbsp;
+Stay alert for shadowy threats and others' interference.
+</p>
+
+<p>
+<input type=radio name="PO3c" value=0><input type=radio name="PO3c" value=1><input type=radio name="PO3c" value=2>&nbsp;
+Easily name objects, such as different kinds of cars, plants, etc. 
+</p>
+
+<p>
+<input type=radio name="Pzc" value=0><input type=radio name="Pzc" value=1><input type=radio name="Pzc" value=2>&nbsp;
+Easily construct and run a simulation or model in your mind's eye.
+</p>
+
+<p>
+<input type=radio name="PC4c" value=0><input type=radio name="PC4c" value=1><input type=radio name="PC4c" value=2>&nbsp;
+May literally feel how someone else feels. 
+</p>
+
+<p>
+<input type=radio name="PO4c" value=0><input type=radio name="PO4c" value=1><input type=radio name="PO4c" value=2>&nbsp;
+Notice leverage points to exert subtle influence. 
+</p>
+
+<p>
+<input type=radio name="PC3d" value=0><input type=radio name="PC3d" value=1><input type=radio name="PC3d" value=2>&nbsp;
+Have a strong sense of personal space.
+</p>
+
+<p>
+<input type=radio name="PO3d" value=0><input type=radio name="PO3d" value=1><input type=radio name="PO3d" value=2>&nbsp;
+Never get confused about left versus right.
+</p>
+
+<p>
+<input type=radio name="Pzd" value=0><input type=radio name="Pzd" value=1><input type=radio name="Pzd" value=2>&nbsp;
+Like to figure out how something works.
+</p>
+
+<p>
+<input type=radio name="PC4d" value=0><input type=radio name="PC4d" value=1><input type=radio name="PC4d" value=2>&nbsp;
+Good at using props that require balance such as a bicycle or snowboard.
+</p>
+
+<p>
+<input type=radio name="PO4d" value=0><input type=radio name="PO4d" value=1><input type=radio name="PO4d" value=2>&nbsp;
+Link distantly-related data to get "ah-ha" solutions.
+</p>
+
+
+<hr>
+
+<p align=center><b>Part 8 of 9</b></p>
+<p>
+<input type=radio name="T5a" value=0><input type=radio name="T5a" value=1><input type=radio name="T5a" value=2>&nbsp;
+Analyze others' facial expressions. 
+</p>
+
+<p>
+<input type=radio name="T6a" value=0><input type=radio name="T6a" value=1><input type=radio name="T6a" value=2>&nbsp;
+See how events connect.
+</p>
+
+<p>
+<input type=radio name="T5b" value=0><input type=radio name="T5b" value=1><input type=radio name="T5b" value=2>&nbsp;
+Quickly notice how people respond to you and then adjust your behavior to aid, conform, appease or be romantic.
+</p>
+
+<p>
+<input type=radio name="T6b" value=0><input type=radio name="T6b" value=1><input type=radio name="T6b" value=2>&nbsp;
+Foresee what will come next and the future.
+</p>
+
+<p>
+<input type=radio name="T5c" value=0><input type=radio name="T5c" value=1><input type=radio name="T5c" value=2>&nbsp;
+Attend to visual details, adjusting them to be precise.
+</p>
+
+<p>
+<input type=radio name="T6c" value=0><input type=radio name="T6c" value=1><input type=radio name="T6c" value=2>&nbsp;
+Imagine yourself within a bigger picture.
+</p>
+
+<p>
+<input type=radio name="T5d" value=0><input type=radio name="T5d" value=1><input type=radio name="T5d" value=2>&nbsp;
+Commit details to memory for later use.   
+</p>
+
+<p>
+<input type=radio name="T6d" value=0><input type=radio name="T6d" value=1><input type=radio name="T6d" value=2>&nbsp;
+Interpret a face or image within a group or context, sensing what's going on.   
+</p>
+
+<p>
+<input type=radio name="T5e" value=0><input type=radio name="T5e" value=1><input type=radio name="T5e" value=2>&nbsp;
+Can get picky with details or factual accuracy.
+</p>
+
+<p>
+<input type=radio name="T6e" value=0><input type=radio name="T6e" value=1><input type=radio name="T6e" value=2>&nbsp;
+Notice symbols and their hidden meaning.
+</p>
+
+<p>
+<input type=radio name="T5f" value=0><input type=radio name="T5f" value=1><input type=radio name="T5f" value=2>&nbsp;
+Easily feel awkward or embarrassed.
+</p>
+
+<p>
+<input type=radio name="T6f" value=0><input type=radio name="T6f" value=1><input type=radio name="T6f" value=2>&nbsp;
+Just "know" things but cannot say why.
+</p>
+
+
+<hr>
+
+<p align=center><b>Part 9 of 9</b></p>
+<p>
+<input type=radio name="O1a" value=0><input type=radio name="O1a" value=1><input type=radio name="O1a" value=2>&nbsp;
+Focus on visual data as evidence.
+</p>
+
+<p>
+<input type=radio name="O2a" value=0><input type=radio name="O2a" value=1><input type=radio name="O2a" value=2>&nbsp;
+Delight in visual beauty. 
+</p>
+
+<p>
+<input type=radio name="O1b" value=0><input type=radio name="O1b" value=1><input type=radio name="O1b" value=2>&nbsp;
+Mentally manipulate a 3-D object, to rotate, disassemble or rearrange it.
+</p>
+
+<p>
+<input type=radio name="O2b" value=0><input type=radio name="O2b" value=1><input type=radio name="O2b" value=2>&nbsp;
+View the richness of a photograph or painting.
+</p>
+
+<p>
+<input type=radio name="O1c" value=0><input type=radio name="O1c" value=1><input type=radio name="O1c" value=2>&nbsp;
+Like to be visually precise, such as having a picture line up on the wall just so.
+</p>
+
+<p>
+<input type=radio name="O2c" value=0><input type=radio name="O2c" value=1><input type=radio name="O2c" value=2>&nbsp;
+Notice how colors, hues, textures, shapes, shading and perspectives fit aesthetically.
+</p>
+
+<p>
+<input type=radio name="O1d" value=0><input type=radio name="O1d" value=1><input type=radio name="O1d" value=2>&nbsp;
+Analyze spaces and objects like an engineer.  
+</p>
+
+<p>
+<input type=radio name="O2d" value=0><input type=radio name="O2d" value=1><input type=radio name="O2d" value=2>&nbsp;
+Gain a visual impression of a person.  
+</p>
+
+<p>
+<input type=radio name="O1e" value=0><input type=radio name="O1e" value=1><input type=radio name="O1e" value=2>&nbsp;
+Read charts and diagrams with ease.
+</p>
+
+<p>
+<input type=radio name="O2e" value=0><input type=radio name="O2e" value=1><input type=radio name="O2e" value=2>&nbsp;
+Get a lot of information from a person's body language.
+</p>
+
+<p>
+<input type=radio name="O1f" value=0><input type=radio name="O1f" value=1><input type=radio name="O1f" value=2>&nbsp;
+Navigate a complex user interface.
+</p>
+
+<p>
+<input type=radio name="O2f" value=0><input type=radio name="O2f" value=1><input type=radio name="O2f" value=2>&nbsp;
+Appreciate life's innate beauty.
+</p>
+<hr><p align=center>
+<b>Process Your Results</b>
+</p><p>
+You are done answering! Before tapping "Submit", please indicate the following demographic details to help us continue our research. This data is stored anonymously and not shared with your facilitator.
+</p>
+<p>
+Your sex:
+<select name="sex">
+	<option selected>
+	<option value="female">female 
+	<option value="male">male
+</select>
+<p>
+
+<p>
+Your handedness:
+<select name="handedness">
+	<option selected>
+	<option value="right">right 
+	<option value="left">left
+</select>
+<p>
+
+<p>
+Your age:
+<input type=text name="age" size=2 maxlength=2>
+</p>
+
+<p>
+Which of the following <b>best</b> represents your background, career, and training?
+<br>
+<select name="profession">
+	<option value="Athletics/Outdoors">Athletics/Outdoors
+	<option value="Business/Management">Business/Management
+	<option value="Childcare/Homemaking">Childcare/Homemaking
+	<option value="Communications/Media">Communications/Media
+	<option value="Computers/Technology">Computers/Technology
+	<option value="Cross-Cultural/Diplomacy">Cross-Cultural/Diplomacy
+	<option value="Counseling/Psychology">Counseling/Psychology
+	<option value="Engineering/Science">Engineering/Science
+	<option value="Entrepreneurship">Entrepreneurship
+	<option value="Fine & Performing Arts">Fine & Performing Arts
+	<option value="Government/Legal">Government/Legal
+	<option value="Hospitality/Service">Hospitality/Service
+	<option value="Math/Statistics">Math/Statistics
+	<option value="Medicine/Health">Medicine/Health
+	<option value="Military/Law Enforcement">Military/Law Enforcement
+	<option value="Religious/Spiritual">Religious/Spiritual
+	<option value="Teaching/Training">Teaching/Training
+	<option value="Transport/Manual Labor">Transport/Manual Labor
+</select>
+</p>
+
+<p>
+Your Myers-Briggs type code? 
+<select name="typecode">
+	<option selected> 
+	<option value="Unknown">Unknown
+	<option value="ESTP">ESTP 
+	<option value="ISTP">ISTP 
+	<option value="ESFP">ESFP 
+	<option value="ISFP">ISFP 
+	<option value="ESTJ">ESTJ 
+	<option value="ISTJ">ISTJ 
+	<option value="ESFJ">ESFJ 
+	<option value="ISFJ">ISFJ 
+	<option value="ENTJ">ENTJ 
+	<option value="INTJ">INTJ 
+	<option value="ENTP">ENTP 
+	<option value="INTP">INTP 
+	<option value="ENFJ">ENFJ 
+	<option value="INFJ">INFJ 
+	<option value="ENFP">ENFP 
+	<option value="INFP">INFP
+</select>
+</p>
+
+<p>
+Your Enneagram type? 
+<select name="enneagram1">
+	<option selected> 
+	<option>Unknown
+	<option value="1">1 
+	<option value="2">2 
+	<option value="3">3 
+	<option value="4">4 
+	<option value="5">5 
+	<option value="6">6 
+	<option value="7">7
+	<option value="8">8 
+	<option value="9">9
+</select>
+</p>
+
+<p>
+Your Enneagram wing or alternate type? 
+<select name="enneagram2">
+	<option selected> 
+	<option>None
+	<option value="1">1 
+	<option value="2">2 
+	<option value="3">3 
+	<option value="4">4 
+	<option value="5">5 
+	<option value="6">6 
+	<option value="7">7
+	<option value="8">8 
+	<option value="9">9
+</select>
+</p>
+
+
+<p>
+<b>Important!</b> Please review your responses to ensure you responded to ALL questions. 
+Missing results cause some browsers to erase your responses. 
+</p>
+
+<p align=center>
+<input type="submit" value="Submit">
+</p>
+
+<hr>
+
+<p align="center">
+<input type=button value="administer only" onClick="fill()">
+</p>
+
+<p>
+Copyright Dario Nardi, 2017. All rights reserved. Please contact the author at service at radiancehouse dot com for details.
+</p>
+
+</td></tr>
+</table>
+</p>
+
+</body>
+</html>
