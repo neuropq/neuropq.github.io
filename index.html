@@ -2025,7 +2025,7 @@ Appreciate life's innate beauty.
 </p>
 <p>
 性别：
-<select name="sex">
+<select name="sex" required="required">
 	<option selected>
 	<option value="female">女
 	<option value="male">男
@@ -2034,7 +2034,7 @@ Appreciate life's innate beauty.
 
 <p>
 惯用手：
-<select name="handedness">
+<select name="handedness" required="required">
 	<option selected>
 	<option value="right">右手
 	<option value="left">左手
@@ -2043,13 +2043,13 @@ Appreciate life's innate beauty.
 
 <p>
 年龄：
-<input type=text name="age" size=2 maxlength=2>
+<input type="text" name="age" size=2 maxlength=2 required="required">
 </p>
 
 <p>
 以下哪项<b>最能</b>代表你的背景、职业和技能？
 <br>
-<select name="profession">
+<select name="profession" required="required">
 	<option selected> 
 	<option value="Athletics/Outdoors">田径/户外
 	<option value="Transport/Manual Labor">运输/人工
@@ -2077,7 +2077,7 @@ Appreciate life's innate beauty.
 
 <p>
 你的MBTI类型？
-<select name="typecode">
+<select name="typecode" required="required">
 	<option selected> 
 	<option value="Unknown">不知道
 	<option value="ESTP">ESTP 
@@ -2101,7 +2101,7 @@ Appreciate life's innate beauty.
 
 <p>
 你九型人格类型？
-<select name="enneagram1">
+<select name="enneagram1" required="required">
 	<option selected> 
 	<option value="Unknown">不知道
 	<option value="1">1 
@@ -2118,7 +2118,7 @@ Appreciate life's innate beauty.
 
 <p>
 你的九型人格侧翼？
-<select name="enneagram2">
+<select name="enneagram2" required="required">
 	<option selected> 
 	<option value="Unknown">不知道
 	<option value="1">1 
@@ -2156,7 +2156,7 @@ Appreciate life's innate beauty.
 <input type="submit" value="提交">
 </p>
 
-<b>注意：</b> 请查看您的回复，以确保您回答了所有问题，缺少结果会弹出此错误提示：Oops! You missed a……
+<b>注意：</b> 请查看您的回复，以确保您回答了所有问题，缺少结果可能会导致浏览器抹掉你的选项。
 <br><hr><br>
 
 <p align=center>
@@ -2179,6 +2179,9 @@ Appreciate life's innate beauty.
 <br>
 
 
+<p align="center">
+<input type=button value="清除所有已选项目" onClick="fill()">
+</p>
 
 
 
